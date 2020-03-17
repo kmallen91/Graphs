@@ -120,7 +120,7 @@ class Graph:
         # Create a queue
         q = Queue()
         # Enqueue A PATH TO the starting vertex
-        q.enqueue(starting_vertex)
+        q.enqueue([starting_vertex])
         # Create a set to store visited vertices
         visited = set()
         # While the queue is not empty...
@@ -185,7 +185,7 @@ class Graph:
                 new_path = self.dfs_recursive(
                     neighbor, destination_vertex, visited)
 
-                if new_path is not None and destination_vertex in new_path:
+                if new_path is not None:
                     return [starting_vertex, *new_path]
         else:
             return
