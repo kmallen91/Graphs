@@ -8,7 +8,7 @@ def earliest_ancestor(ancestors, starting_node):
             verticies[i[1]].add(i[0])
         else:
             verticies[i[1]] = set([i[0]])
-
+    print(verticies)
     s = Stack()
     visited = set()
     s.push(starting_node)
@@ -16,7 +16,7 @@ def earliest_ancestor(ancestors, starting_node):
         v = s.pop()
         if v not in visited:
             visited.add(v)
-            if v in verticies.keys():
+            if v in verticies:
                 if len(verticies[v]) > 1:
                     parents = []
                     for neighbor in verticies[v]:
@@ -31,9 +31,9 @@ def earliest_ancestor(ancestors, starting_node):
                     for neighbor in verticies[v]:
                         s.push(neighbor)
 
-            elif v not in verticies.keys() and v == starting_node:
+            elif v not in verticies and v == starting_node:
                 return -1
-            elif v not in verticies.keys() and s.size == 0:
+            elif v not in verticies and s.size == 0:
                 parents.append(v)
     return v
 
