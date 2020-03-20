@@ -55,7 +55,7 @@ If all paths have been explored, you're done!
 
 It is very difficult to calculate the shortest possible path that traverses the entire graph. Why?
 
-My best path is 957 moves. Can you find a shorter path?
+My best path is 957 moves. Can you find a shorter path? 
 
 
 ## Rubric
