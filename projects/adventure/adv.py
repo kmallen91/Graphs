@@ -34,7 +34,7 @@ traversal_path = []
 # check if room in directions (N, E, S, W)
 # check if neighbors have been visited (possibly second array for 'undiscovered')
 # add undiscovered rooms to stack, go thru undiscovered
-# once undiscovered is empty, return to 
+# once undiscovered is empty, move to previous room, recheck
 
 # parse the map graph to get all rooms and their directions
 room_dict = {}
